@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Francis Blessing — Graphic Designer (Thumbnails • Matchday • Branding)</title>
+  <meta name="description" content="Francis Blessing is a graphic designer creating high-converting YouTube thumbnails, football matchday posters, product & brand designs, church flyers, and social media designs." />
+  <meta name="theme-color" content="#0b0f14" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Francis Blessing — Graphic Designer" />
+  <meta property="og:description" content="High-converting YouTube thumbnails • Matchday posters • Branding • Church flyers • Social media designs" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1523726491678-bf852e717f6a?w=1200&auto=format&fit=crop&q=70" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Swiper (Sliders) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#0f1620;
+      --card2:#0c121a;
+      --text:#eaf0f7;
+      --muted:#a9b6c6;
+      --line:rgba(255,255,255,.08);
+      --brand:#55e6a5;     /* accent 1 */
+      --brand2:#5aa8ff;    /* accent 2 */
+      --warn:#ffcf5a;
+      --shadow: 0 18px 50px rgba(0,0,0,.35);
+      --radius: 18px;
+      --radius2: 26px;
+      --max: 1120px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(85,230,165,.14), transparent 60%),
+        radial-gradient(900px 500px at 110% 10%, rgba(90,168,255,.14), transparent 55%),
+        radial-gradient(1000px 600px at 40% 110%, rgba(255,207,90,.10), transparent 60%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    .container{max-width:var(--max); margin:0 auto; padding:0 18px;}
+    .nav{
+      position:sticky; top:0; z-index:30;
+      backdrop-filter: blur(12px);
+      background: rgba(11,15,20,.60);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.2px;
+    }
+    .dot{
+      width:12px; height:12px; border-radius:50%;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow: 0 0 0 6px rgba(85,230,165,.08);
+    }
+    .menu{
+      display:flex; gap:14px; flex-wrap:wrap;
+      font-weight:600; color:var(--muted);
+    }
+    .menu a{padding:8px 10px; border-radius:12px}
+    .menu a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+    .cta{
+      display:flex; gap:10px; align-items:center;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px; border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color:var(--text); font-weight:700;
+      transition:.2s transform, .2s background, .2s border;
+      box-shadow:none;
+      white-space:nowrap;
+    }
+    .btn:hover{transform: translateY(-1px); background:rgba(255,255,255,.07)}
+    .btn.primary{
+      border:0;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      color:#061019;
+      box-shadow: 0 14px 30px rgba(85,230,165,.18);
+    }
+    .btn.primary:hover{filter:saturate(1.05); transform: translateY(-1px)}
+    .btn.ghost{background:transparent}
+    .hero{
+      padding:44px 0 24px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .menu{display:none}
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+    }
+    .hero-left{padding:26px}
+    .tag{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:8px 12px;
+      border:1px solid var(--line);
+      border-radius: 999px;
+      color:var(--muted);
+      background: rgba(255,255,255,.03);
+      font-weight:600;
+      font-size: 13px;
+    }
+    .tag b{color:var(--text)}
+    h1{
+      margin:14px 0 10px;
+      font-size: 44px;
+      line-height:1.08;
+      letter-spacing:-.8px;
+    }
+    @media (max-width: 520px){ h1{font-size: 36px;} }
+    .sub{
+      color:var(--muted);
+      font-size: 16px;
+      margin:0 0 18px;
+      max-width: 60ch;
+    }
+    .hero-actions{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin: 16px 0 8px;
+    }
+    .proof-row{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top:14px;
+    }
+    .pill{
+      padding:10px 12px;
+      border-radius: 16px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color:var(--muted);
+      font-weight:600;
+      font-size: 13px;
+    }
+    .pill span{color:var(--text)}
+    .hero-right{
+      padding:20px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .mini{
+      padding:16px;
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.20);
+      border:1px solid var(--line);
+    }
+    .mini h3{margin:0 0 8px; font-size:14px; color:var(--muted); font-weight:700; letter-spacing:.3px; text-transform:uppercase}
+    .mini p{margin:0; color:var(--text); font-weight:700}
+    .mini small{display:block; color:var(--muted); margin-top:6px}
+    .section{
+      padding: 22px 0;
+    }
+    .section-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
+      margin: 6px 0 14px;
+    }
+    .section-head h2{
+      margin:0;
+      font-size: 22px;
+      letter-spacing:-.3px;
+    }
+    .section-head p{
+      margin:0;
+      color:var(--muted);
+      max-width: 60ch;
+    }
+    .grid-3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
+    }
+    @media (max-width: 900px){ .grid-3{grid-template-columns:1fr} }
+    .service{
+      padding:16px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.03);
+      border:1px solid var(--line);
+    }
+    .service b{
+      display:block;
+      margin-bottom:6px;
+      font-size: 15px;
+    }
+    .service span{color:var(--muted); font-size:13px}
+    .portfolio{
+      padding: 18px;
+    }
+    .portfolio-top{
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      margin-bottom:12px;
+    }
+    .portfolio-top .left strong{display:block; font-size:15px}
+    .portfolio-top .left small{color:var(--muted)}
+    .swiper{
+      width:100%;
+      border-radius: 18px;
+    }
+    .swiper-slide{
+      height: 260px;
+      border-radius: 18px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.02);
+      position:relative;
+    }
+    .swiper-slide img{
+      width:100%; height:100%;
+      object-fit:cover;
+      display:block;
+      transform: scale(1.02);
+      filter: saturate(1.05) contrast(1.02);
+    }
+    .cap{
+      position:absolute; left:14px; bottom:14px;
+      right:14px;
+      padding:10px 12px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(11,15,20,.65);
+      backdrop-filter: blur(10px);
+      font-weight:700;
+      font-size: 13px;
+      display:flex; justify-content:space-between; gap:10px;
+    }
+    .cap small{color:var(--muted); font-weight:600}
+    .swiper-nav{
+      display:flex; gap:10px; align-items:center;
+    }
+    .swbtn{
+      width:38px; height:38px;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      display:inline-flex; align-items:center; justify-content:center;
+      cursor:pointer;
+      user-select:none;
+    }
+    .swbtn:hover{background: rgba(255,255,255,.06)}
+    .process{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+    @media (max-width: 900px){ .process{grid-template-columns:1fr} }
+    .step{
+      padding:16px;
+      border-radius: var(--radius);
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    .step b{display:flex; gap:10px; align-items:center}
+    .badge{
+      width:26px; height:26px; border-radius:10px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      color:#061019; display:inline-flex; align-items:center; justify-content:center;
+      font-weight:900;
+      flex: 0 0 auto;
+    }
+    .step p{margin:10px 0 0; color:var(--muted); font-size:13px}
+    .pricing{
+      display:grid; grid-template-columns: repeat(3, 1fr); gap:12px;
+    }
+    @media (max-width: 900px){ .pricing{grid-template-columns:1fr} }
+    .price{
+      padding:18px;
+      border-radius: var(--radius2);
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    .price h3{margin:0 0 6px; font-size:16px}
+    .price .amt{font-size:28px; font-weight:900; margin: 6px 0}
+    .price ul{margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:13px}
+    .price li{margin:6px 0}
+    .price.featured{
+      background: linear-gradient(180deg, rgba(85,230,165,.14), rgba(255,255,255,.03));
+      box-shadow: 0 22px 60px rgba(85,230,165,.12);
+    }
+    .quote{
+      padding:18px;
+      border-radius: var(--radius2);
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    .quote p{margin:0; color:var(--text); font-weight:700}
+    .quote small{display:block; margin-top:8px; color:var(--muted)}
+    .contact{
+      display:grid; grid-template-columns: 1fr 1fr; gap:12px;
+    }
+    @media (max-width: 900px){ .contact{grid-template-columns:1fr} }
+    .contact .box{
+      padding:18px; border-radius: var(--radius2);
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    .field{
+      display:flex; flex-direction:column; gap:6px; margin-bottom:10px;
+    }
+    label{font-size:13px; color:var(--muted); font-weight:700}
+    input, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color:var(--text);
+      outline:none;
+      font-family:inherit;
+      font-size:14px;
+    }
+    textarea{min-height:120px; resize:vertical}
+    .footer{
+      padding: 24px 0 40px;
+      color:var(--muted);
+      font-size: 13px;
+      text-align:center;
+    }
+    .kicker{
+      display:inline-flex; gap:8px; align-items:center;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight:700;
+    }
+    .kicker i{
+      width:8px; height:8px; border-radius:50%;
+      background: var(--brand);
+      display:inline-block;
+      box-shadow: 0 0 0 6px rgba(85,230,165,.08);
+    }
+  </style>
+
+  <!-- Optional: structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Francis Blessing",
+    "jobTitle":"Graphic Designer",
+    "url":"https://www.pinterest.com/Ogbeni_Francis/",
+    "sameAs":[
+      "https://www.pinterest.com/Ogbeni_Francis/"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <div class="brand">
+          <span class="dot"></span>
+          <span>Francis Blessing</span>
+        </div>
+
+        <div class="menu">
+          <a href="#work">Work</a>
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#pricing">Packages</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="cta">
+          <!-- Replace YOUR_WHATSAPP_NUMBER with your number in international format, e.g. 2348012345678 -->
+          <a class="btn ghost" target="_blank" rel="noreferrer"
+             href="https://www.pinterest.com/Ogbeni_Francis/">Pinterest</a>
+          <a class="btn primary" href="#contact">Hire Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="card hero-left">
+          <div class="tag">
+            <b>Available this week</b> • Fast turnaround • Premium quality
+          </div>
+
+          <h1>Designs that make people <span style="color:var(--brand)">click</span>, <span style="color:var(--brand2)">buy</span>, and <span style="color:var(--warn)">show up</span>.</h1>
+
+          <p class="sub">
+            I’m <b>Francis Blessing</b>, a graphic designer focused on results:
+            <b>YouTube thumbnails</b>, <b>football matchday posters</b>, <b>branding & product designs</b>,
+            <b>church flyers</b>, and <b>social media content</b> that looks premium and converts.
+          </p>
+
+          <div class="hero-actions">
+            <!-- Replace with your WhatsApp / email -->
+            <a class="btn primary" href="#pricing">See Packages</a>
+            <a class="btn" href="#work">View Work</a>
+            <a class="btn" href="#contact">Get a Quote</a>
+          </div>
+
+          <div class="proof-row">
+            <div class="pill"><span>24–48h</span> delivery on most designs</div>
+            <div class="pill"><span>Unlimited</span> revisions (within scope)</div>
+            <div class="pill"><span>Commercial</span> ready files</div>
+          </div>
+        </div>
+
+        <div class="card hero-right">
+          <div class="mini">
+            <h3>Best fit for</h3>
+            <p>Creators • Clubs • Brands • Churches • Events</p>
+            <small>Designed for audiences who scroll fast and decide faster.</small>
+          </div>
+          <div class="mini">
+            <h3>Signature style</h3>
+            <p>Bold typography • Clean hierarchy • High contrast</p>
+            <small>Modern, professional, and platform-optimized.</small>
+          </div>
+          <div class="mini">
+            <h3>Quick proof</h3>
+            <p>Portfolio on Pinterest</p>
+            <small><a target="_blank" rel="noreferrer" href="https://www.pinterest.com/Ogbeni_Francis/" style="text-decoration:underline">Open Pinterest →</a></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker"><i></i> SERVICES</div>
+          <h2>What I design</h2>
+        </div>
+        <p>Pick one service or bundle multiple for better brand consistency.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="service">
+          <b>YouTube Thumbnails</b>
+          <span>High CTR concepts, bold text hierarchy, facial cutouts, clean composition.</span>
+        </div>
+        <div class="service">
+          <b>Football Matchday Posters</b>
+          <span>Fixture graphics, lineup templates, hype posters, scoreboard designs.</span>
+        </div>
+        <div class="service">
+          <b>Product & Brand Designs</b>
+          <span>Logos, product ads, packaging visuals, brand kits, promo creatives.</span>
+        </div>
+        <div class="service">
+          <b>Church Flyers</b>
+          <span>Event flyers, program banners, sermon series designs, conference posters.</span>
+        </div>
+        <div class="service">
+          <b>Social Media Designs</b>
+          <span>Carousel posts, IG/FB banners, promos, announcements, campaign content.</span>
+        </div>
+        <div class="service">
+          <b>Design Systems (Optional)</b>
+          <span>Reusable templates so your brand stays consistent every week.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="work" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker"><i></i> PORTFOLIO</div>
+          <h2>Selected work (swipe through each category)</h2>
+        </div>
+        <p>Replace these placeholder images with your real designs for maximum trust.</p>
+      </div>
+
+      <!-- 1: YouTube Thumbnails -->
+      <div class="card portfolio">
+        <div class="portfolio-top">
+          <div class="left">
+            <strong>YouTube Thumbnails</strong>
+            <small>Built to stop the scroll and earn the click.</small>
+          </div>
+          <div class="swiper-nav">
+            <div class="swbtn yt-prev" aria-label="Previous">‹</div>
+            <div class="swbtn yt-next" aria-label="Next">›</div>
+          </div>
+        </div>
+
+        <div class="swiper yt-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=1600&auto=format&fit=crop&q=70" alt="YouTube Thumbnail 1">
+              <div class="cap">Thumbnail Concept <small>Bold CTR layout</small></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1600&auto=format&fit=crop&q=70" alt="YouTube Thumbnail 2">
+              <div class="cap">Thumbnail Concept <small>High contrast</small></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1600&auto=format&fit=crop&q=70" alt="YouTube Thumbnail 3">
+              <div class="cap">Thumbnail Concept <small>Clean hierarchy</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:12px"></div>
+
+      <!-- 2: Matchday Posters -->
+      <div class="card portfolio">
+        <div class="portfolio-top">
+          <div class="left">
+            <strong>Football Matchday Posters</strong>
+            <small>Fixtures, lineups, hype posters and results graphics.</small>
+          </div>
+          <div class="swiper-nav">
+            <div class="swbtn md-prev" aria-label="Previous">‹</div>
+            <div class="swbtn md-next" aria-label="Next">›</div>
+          </div>
+        </div>
+
+        <div class="swiper md-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?w=1600&auto=format&fit=crop&q=70" alt="Matchday Poster 1">
+              <div class="cap">Matchday Poster <small>Fixture highlight</small></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?w=1600&auto=format&fit=crop&q=70" alt="Matchday Poster 2">
+              <div class="cap">Matchday Poster <small>Lineup template</small></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=1600&auto=format&fit=crop&q=70" alt="Matchday Poster 3">
+              <div class="cap">Matchday Poster <small>Bold typography</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:12px"></div>
+
+      <!-- 3: Product & Brand -->
+      <div class="card portfolio">
+        <div class="portfolio-top">
+          <div class="left">
+            <strong>Product & Brand Designs</strong>
+            <small>Ads, brand visuals, product promos that look expensive.</small>
+          </div>
+          <div class="swiper-nav">
+            <div class="swbtn pb-prev" aria-label="Previous">‹</div>
+            <div class="swbtn pb-next" aria-label="Next">›</div>
+          </div>
+        </div>
+
+        <div class="swiper pb-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?w=1600&auto=format&fit=crop&q=70" alt="Brand Design 1">
+              <div class="cap">Brand Visual <small>Clean layout</small></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1600&auto=format&fit=crop&q=70" alt="Brand Design 2">
+              <div class="cap">Product Ad <small>Premium feel</small></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1600&auto=format&fit=crop&q=70" alt="Brand Design 3">
+              <div class="cap">Product Promo <small>Strong contrast</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:12px"></div>
+
+      <!-- 4: Church Flyers -->
+      <div class="card portfolio">
+        <div class="portfolio-top">
+          <div class="left">
+            <strong>Church Flyers</strong>
+            <small>Programs, conferences, worship nights, sermon series.</small>
+          </div>
+          <div class="swiper-nav">
+            <div class="swbtn ch-prev" aria-label="Previous">‹</div>
+            <div class="swbtn ch-next" aria-label="Next">›</div>
+          </div>
+        </div>
+
+        <div class="swiper ch-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1520628188576-5d7f1f6a4d83?w=1600&auto=format&fit=crop&q=70" alt="Church Flyer 1">
+              <div class="cap">Church Flyer <small>Event focus</small></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600&auto=format&fit=crop&q=70" alt="Church Flyer 2">
+              <div class="cap">Church Flyer <small>Clear hierarchy</small></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1527259218941-4f27339d3f50?w=1600&auto=format&fit=crop&q=70" alt="Church Flyer 3">
+              <div class="cap">Church Flyer <small>Modern style</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:12px"></div>
+
+      <!-- 5: Social Media Designs -->
+      <div class="card portfolio">
+        <div class="portfolio-top">
+          <div class="left">
+            <strong>Social Media Designs</strong>
+            <small>Campaign posts, promos, announcements, carousels.</small>
+          </div>
+          <div class="swiper-nav">
+            <div class="swbtn sm-prev" aria-label="Previous">‹</div>
+            <div class="swbtn sm-next" aria-label="Next">›</div>
+          </div>
+        </div>
+
+        <div class="swiper sm-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=1600&auto=format&fit=crop&q=70" alt="Social Design 1">
+              <div class="cap">Social Post <small>Promo layout</small></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=1600&auto=format&fit=crop&q=70" alt="Social Design 2">
+              <div class="cap">Social Post <small>Campaign feel</small></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?w=1600&auto=format&fit=crop&q=70" alt="Social Design 3">
+              <div class="cap">Social Post <small>Clean visuals</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker"><i></i> PROCESS</div>
+          <h2>Fast, clear, professional workflow</h2>
+        </div>
+        <p>This is what premium clients want: speed + clarity + consistency.</p>
+      </div>
+
+      <div class="process">
+        <div class="step">
+          <b><span class="badge">1</span> Brief + Direction</b>
+          <p>You share goal, references, audience, platform size. I align your design with what converts.</p>
+        </div>
+        <div class="step">
+          <b><span class="badge">2</span> First Draft (24–48h)</b>
+          <p>I deliver a clean draft with strong hierarchy and premium look. You review and request changes.</p>
+        </div>
+        <div class="step">
+          <b><span class="badge">3</span> Revisions</b>
+          <p>We refine until it’s sharp. (Unlimited revisions within scope to keep it stress-free.)</p>
+        </div>
+        <div class="step">
+          <b><span class="badge">4</span> Final Delivery</b>
+          <p>Export-ready files: JPG/PNG/PDF + source files when needed. Always platform-optimized.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker"><i></i> PACKAGES</div>
+          <h2>Designed to win a $500 client fast</h2>
+        </div>
+        <p>Premium clients prefer clear packages. Choose the one that fits your goal.</p>
+      </div>
+
+      <div class="pricing">
+        <div class="price">
+          <h3>Starter</h3>
+          <div class="amt">$120</div>
+          <div style="color:var(--muted); font-weight:700; font-size:13px">Best for quick one-off designs</div>
+          <ul>
+            <li>Up to 3 designs (any category)</li>
+            <li>24–48h turnaround</li>
+            <li>Unlimited revisions (within scope)</li>
+            <li>Platform-ready exports</li>
+          </ul>
+        </div>
+
+        <div class="price featured">
+          <h3>Growth (Most Popular)</h3>
+          <div class="amt">$500</div>
+          <div style="color:var(--muted); font-weight:700; font-size:13px">Perfect for your next “high paying” gig</div>
+          <ul>
+            <li>12 designs total (mix categories)</li>
+            <li>2 platform templates (reusable)</li>
+            <li>Priority delivery + organized files</li>
+            <li>Brand consistency across all designs</li>
+          </ul>
+          <div style="margin-top:12px">
+            <a class="btn primary" href="#contact">Book the $500 package</a>
+          </div>
+        </div>
+
+        <div class="price">
+          <h3>Monthly Retainer</h3>
+          <div class="amt">$900+</div>
+          <div style="color:var(--muted); font-weight:700; font-size:13px">For creators/brands posting weekly</div>
+          <ul>
+            <li>30 designs/month (or custom)</li>
+            <li>Brand kit + template system</li>
+            <li>Same-day priority requests</li>
+            <li>Best value per design</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="height:12px"></div>
+
+      <div class="quote">
+        <p>“If you want premium results, you need premium presentation. I design visuals that look expensive and perform.”</p>
+        <small>— Francis Blessing</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker"><i></i> CONTACT</div>
+          <h2>Let’s work</h2>
+        </div>
+        <p>Send a message with your goal + deadline. I’ll reply quickly.</p>
+      </div>
+
+      <div class="contact">
+        <div class="box">
+          <h3 style="margin:0 0 10px">Fast booking</h3>
+          <p style="margin:0 0 14px; color:var(--muted)">
+            For fastest response, use WhatsApp or email. Replace the placeholders below with your real contact.
+          </p>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap">
+            <a class="btn primary" target="_blank" rel="noreferrer"
+               href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Hi%20Francis%20Blessing%2C%20I%20need%20a%20design%20project.%20My%20deadline%20is%20...">
+              WhatsApp Me
+            </a>
+            <a class="btn" href="mailto:YOUR_EMAIL@gmail.com?subject=Design%20Project%20Request&body=Hi%20Francis%2C%20I%20need%20...">
+              Email Me
+            </a>
+            <a class="btn" target="_blank" rel="noreferrer" href="https://www.pinterest.com/Ogbeni_Francis/">
+              View Pinterest
+            </a>
+          </div>
+
+          <div style="margin-top:14px; color:var(--muted); font-size:13px">
+            <b style="color:var(--text)">Tip:</b> If your client is serious, ask for:
+            budget, brand colors, platform size, deadline, and references.
+          </div>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 10px">Quick message</h3>
+          <form onsubmit="return sendMailto(event)">
+            <div class="field">
+              <label>Your Name</label>
+              <input id="name" type="text" placeholder="John Doe" required>
+            </div>
+            <div class="field">
+              <label>Your Email</label>
+              <input id="email" type="email" placeholder="john@email.com" required>
+            </div>
+            <div class="field">
+              <label>Project Details</label>
+              <textarea id="message" placeholder="What do you need? (Category, quantity, deadline, references)" required></textarea>
+            </div>
+            <button class="btn primary" type="submit">Send Request</button>
+          </form>
+          <small style="display:block; margin-top:10px; color:var(--muted)">
+            This form opens the user’s email app (simple + reliable for a one-page portfolio).
+          </small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    © <span id="y"></span> Francis Blessing • One-page portfolio • Designed to convert premium clients
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    function makeSwiper(root, prev, next){
+      return new Swiper(root, {
+        loop: true,
+        spaceBetween: 12,
+        slidesPerView: 1.15,
+        centeredSlides: true,
+        breakpoints: {
+          700: { slidesPerView: 2.15 },
+          980: { slidesPerView: 2.6 }
+        },
+        navigation: { prevEl: prev, nextEl: next },
+        autoplay: { delay: 2600, disableOnInteraction: false }
+      });
+    }
+
+    makeSwiper(".yt-swiper", ".yt-prev", ".yt-next");
+    makeSwiper(".md-swiper", ".md-prev", ".md-next");
+    makeSwiper(".pb-swiper", ".pb-prev", ".pb-next");
+    makeSwiper(".ch-swiper", ".ch-prev", ".ch-next");
+    makeSwiper(".sm-swiper", ".sm-prev", ".sm-next");
+
+    function sendMailto(e){
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const email = encodeURIComponent(document.getElementById('email').value.trim());
+      const msg = encodeURIComponent(document.getElementById('message').value.trim());
+      const subject = encodeURIComponent("Design Project Request");
+      const body = encodeURIComponent(
+        `Name: ${decodeURIComponent(name)}\nEmail: ${decodeURIComponent(email)}\n\nProject Details:\n${decodeURIComponent(msg)}\n\nPreferred Package: (Starter / $500 Growth / Monthly)\nDeadline:\nReferences/Links:`
+      );
+      // Replace YOUR_EMAIL@gmail.com below:
+      window.location.href = `mailto:YOUR_EMAIL@gmail.com?subject=${subject}&body=${body}`;
+      return false;
+    }
+  </script>
+</body>
+</html>
